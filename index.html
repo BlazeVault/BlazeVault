@@ -6,218 +6,158 @@
 <title>Blaze Vault</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
 body {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
     color: white;
+    text-align: center;
     scroll-behavior: smooth;
 }
 
-/* HEADER */
 header {
-    padding: 20px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 100px 20px;
 }
 
-header h1 {
-    font-size: 24px;
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
-}
-
-nav a {
-    color: #cbd5e1;
-    text-decoration: none;
-    margin-left: 25px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #06b6d4;
-}
-
-/* HERO */
-.hero {
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 10%;
-}
-
-.hero h2 {
+h1 {
     font-size: 60px;
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    color: #cbd5e1;
-}
-
-/* SECTION */
-.section {
-    padding: 100px 12%;
-    text-align: center;
-}
-
-.section h3 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.section p {
+p {
     max-width: 800px;
     margin: auto;
-    line-height: 1.8;
     font-size: 18px;
-    color: #cbd5e1;
+    line-height: 1.6;
+    color: #ccc;
 }
 
-/* BUTTON */
-.option-btn {
+.section {
+    padding: 80px 20px;
+}
+
+.button {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 40px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff416c;
+}
+
+.large-button {
     display: inline-block;
     margin-top: 40px;
-    padding: 14px 35px;
-    border-radius: 50px;
-    background: transparent;
-    border: 2px solid #7c3aed;
+    padding: 25px 70px;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 60px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.large-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #0072ff;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.4s;
+    margin: 0 20px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.option-btn:hover {
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    box-shadow: 0 0 20px rgba(124,58,237,0.8);
-}
-
-/* BIG DISCORD BUTTON */
-.big-link {
-    display: block;
-    margin: 60px auto 0;
-    width: fit-content;
-    padding: 22px 60px;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 15px;
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    color: white;
-    text-decoration: none;
-    transition: 0.4s;
-    box-shadow: 0 0 30px rgba(124,58,237,0.7);
-}
-
-.big-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 45px rgba(6,182,212,0.9);
-}
-
-/* CONTACT */
-.contact-page {
-    padding: 120px 10%;
-    text-align: center;
-}
-
-.contact-page h2 {
-    font-size: 42px;
-    margin-bottom: 25px;
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+nav a:hover {
+    color: #ff416c;
 }
 
 .contact-box {
-    margin-top: 30px;
-    padding: 30px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    display: inline-block;
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(255,65,108,0.4);
 }
 
-.contact-box p {
-    font-size: 20px;
-    margin: 12px 0;
-    color: #cbd5e1;
-}
-
-/* FOOTER */
 footer {
-    text-align: center;
     padding: 30px;
-    color: #94a3b8;
+    background: #000;
+    font-size: 14px;
+    color: #888;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Blaze Vault</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact Info</a>
+</nav>
 
-<section class="hero" id="home">
-    <h2>Welcome to Blaze Vault</h2>
-    <p>The ultimate destination for trusted, efficient and reliable Discord services.</p>
+<section id="home" class="section">
+    <header>
+        <h1>Welcome to Blaze Vault</h1>
+        <p>The Ultimate Marketplace Experience.</p>
+    </header>
 </section>
 
-<section class="section" id="about">
-    <h3>About Blaze Shop</h3>
+<section id="about" class="section">
+    <h2>About Blaze Shop</h2>
     <p>
-        Blaze Shop is a reliable, trustworthy and supportive Discord server where everybody is welcome.
-        Our services are efficient and dependable, ensuring premium support every time.
-        We also organize exciting community events to keep everything fun and active.
-        The owners’ IDs are mentioned below — contact us fast for any information or questions.
-        And don’t forget to join us and become part of the Blaze family.
+        Blaze Shop is a reliable, trustworthy and supportive Discord server everybody can come to. 
+        Our service is efficient and reliable. We will also organize exciting events for you guys 
+        so it will be fun and active. The owner's ID is mentioned below — contact us fast for any 
+        info and questions. And don’t forget to join us.
     </p>
 
-    <a href="#contact" class="option-btn">Contact Info</a>
+    <a href="#contact" class="button">Contact Info</a>
 
-    <a href="https://discord.gg/49tN2nFSCb" class="big-link" target="_blank">
-        🚀 JOIN BLAZE SHOP NOW
+    <br>
+
+    <!-- CHANGE THE LINK BELOW -->
+    <a href="https://discord.gg/YOUR_INVITE_LINK" class="large-button">
+        🚀 JOIN BLAZE VAULT NOW
     </a>
 </section>
 
-<section class="contact-page" id="contact">
+<section id="contact" class="section">
     <h2>Contact Information</h2>
-
     <div class="contact-box">
-        <p>For any type of inquiry:</p>
-        <p><strong>lwkyace</strong></p>
-        <p><strong>dewvortzzz</strong></p>
-        <p style="font-size:14px; opacity:0.7; margin-top:15px;">
-            Open Discord and search the IDs above to contact us.
-        </p>
+        <p><strong>For any type of inquiry (Discord ID)</strong></p>
+        <p>lwkyace</p>
+        <p>dewvortzzz</p>
     </div>
 </section>
 
 <footer>
-    © 2026 Blaze Vault | All Rights Reserved
+    © 2026 Blaze Vault | Professional Discord Marketplace
 </footer>
 
 </body>
